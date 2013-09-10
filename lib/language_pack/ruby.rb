@@ -79,6 +79,10 @@ class LanguagePack::Ruby < LanguagePack::Base
       install_binaries
       run_assets_precompile_rake_task
     end
+    puts "IN WORKING DIRECTORY:"
+    `pwd`
+    puts "HAVE FILES"
+    `ls -ls`
     super
   end
 
