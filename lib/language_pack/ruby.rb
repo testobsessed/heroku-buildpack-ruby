@@ -70,8 +70,6 @@ class LanguagePack::Ruby < LanguagePack::Base
     remove_vendor_bundle
     install_ruby
     install_jvm
-    puts "IN WORKING DIRECTORY: #{Dir.pwd}"
-    puts "HAVE FILES: #{Dir.entries(".").inspect}"
     setup_language_pack_environment
     setup_profiled
     allow_git do
@@ -80,6 +78,10 @@ class LanguagePack::Ruby < LanguagePack::Base
       create_database_yml
       install_binaries
       run_assets_precompile_rake_task
+    end
+    puts "SLEEPING FOR TESTING PURPOSES"
+    60.times do |s|
+      puts "#{60-s} Z zz z... "
     end
     super
   end
