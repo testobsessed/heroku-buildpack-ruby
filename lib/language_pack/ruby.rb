@@ -68,12 +68,12 @@ class LanguagePack::Ruby < LanguagePack::Base
     staging_environment_path # Save current environment path first
     Dir.chdir(build_path)
     remove_vendor_bundle
+    install_ruby
+    install_jvm
     puts "IN WORKING DIRECTORY:"
     `pwd`
     puts "HAVE FILES"
     `ls -ls`
-    install_ruby
-    install_jvm
     setup_language_pack_environment
     setup_profiled
     allow_git do
