@@ -68,6 +68,10 @@ class LanguagePack::Ruby < LanguagePack::Base
     staging_environment_path # Save current environment path first
     Dir.chdir(build_path)
     remove_vendor_bundle
+    puts "IN WORKING DIRECTORY:"
+    `pwd`
+    puts "HAVE FILES"
+    `ls -ls`
     install_ruby
     install_jvm
     setup_language_pack_environment
@@ -79,10 +83,6 @@ class LanguagePack::Ruby < LanguagePack::Base
       install_binaries
       run_assets_precompile_rake_task
     end
-    puts "IN WORKING DIRECTORY:"
-    `pwd`
-    puts "HAVE FILES"
-    `ls -ls`
     super
   end
 
