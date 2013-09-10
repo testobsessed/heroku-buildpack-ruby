@@ -81,6 +81,7 @@ class LanguagePack::Ruby < LanguagePack::Base
     end
     puts "SLEEPING FOR TESTING PURPOSES"
     60.times do |s|
+      sleep 1
       puts "#{60-s} Z zz z... "
     end
     super
