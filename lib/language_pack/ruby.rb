@@ -70,10 +70,8 @@ class LanguagePack::Ruby < LanguagePack::Base
     remove_vendor_bundle
     install_ruby
     install_jvm
-    puts "IN WORKING DIRECTORY:"
-    `pwd`
-    puts "HAVE FILES"
-    `ls -ls`
+    puts "IN WORKING DIRECTORY: #{Dir.pwd}"
+    puts "HAVE FILES: #{Dir.entries(".").inspect}"
     setup_language_pack_environment
     setup_profiled
     allow_git do
