@@ -79,11 +79,11 @@ class LanguagePack::Ruby < LanguagePack::Base
       install_binaries
       run_assets_precompile_rake_task
     end
-    puts "SLEEPING FOR TESTING PURPOSES"
-    60.times do |s|
-      sleep 1
-      puts "#{60-s} Z zz z... "
-    end
+    # puts "SLEEPING FOR TESTING PURPOSES"
+    # 60.times do |s|
+    #   sleep 1
+    #   puts "#{60-s} Z zz z... "
+    # end
     super
   end
 

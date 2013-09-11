@@ -7,6 +7,12 @@ $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 
 if pack = LanguagePack.detect(ARGV[0], ARGV[1])
+  puts "!!!!!!!!!"
+  puts "in bin/compile"
+  puts "ARGV[0]: #{ARGV[0]}"
+  puts "ARGV[1]: #{ARGV[1]}"
+  puts "!!!!!!!!!"
+
   pack.log("compile") do
     pack.compile
   end
